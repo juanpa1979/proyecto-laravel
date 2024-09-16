@@ -16,19 +16,13 @@ Route::get/*('/students', function () {
 
 Route::get('/students', [studentController::class, 'index']);
 
-Route::get('/students/{id}', function () {
-    return 'Obteniendo un Estudiante';
-});
+Route::get('/student/{id}', [studentController::class, 'show']);
 
-Route::post('/students', function () {
-    return 'Creando Estudiante';
-});
+Route::post('/students', [studentController::class, 'store']);
 
-Route::put('/students/{id}', function () {
-    return 'Actualizando Estudiante';
-});
+Route::put('/student/{id}', [studentController::class, 'update']);
 
-Route::delete('/students/{id}', function () {
-    return 'Eliminando Estudiante';
-});
+Route::patch('/student/{id}', [studentController::class, 'updatePartial']);
+
+Route::delete('/student/{id}', [studentController::class, 'destroy']);
 
