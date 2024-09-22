@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api; // Este comando indica la ruta en la que estoy situado
 
 use App\Http\Controllers\Controller;
 use App\Models\Student;
